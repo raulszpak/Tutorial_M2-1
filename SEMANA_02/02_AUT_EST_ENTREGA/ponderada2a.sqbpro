@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Raul/Desktop/ponderada2a.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1531"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,10:mainconquistas"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">-- cria a tabela pessoa
+
+CREATE TABLE pessoa (
+
+  IDPessoa INTEGER PRIMARY KEY,
+
+  Nome TEXT,
+
+  Idade INTEGER,
+
+  Email TEXT,
+
+  Telefone TEXT,
+
+  Endereco TEXT,
+
+  Descricao TEXT
+
+);
+
+
+
+-- cria a tabela formacao_academica
+
+CREATE TABLE formacao_academica (
+
+  IDFormacao INTEGER PRIMARY KEY AUTOINCREMENT,
+
+  IDPessoa INTEGER,
+
+  Nomefundacao TEXT,
+
+  Nomecurso TEXT,
+
+  Datainicio DATE,
+
+  Datafim DATE,
+
+  Descricao TEXT,
+
+  FOREIGN KEY (IDPessoa) REFERENCES pessoa(IDPessoa)
+
+);
+
+
+
+-- cria a tabela habilidades
+
+
+CREATE TABLE habilidades (
+
+  IDHabilidade INTEGER PRIMARY KEY AUTOINCREMENT,
+
+  IDPessoa INTEGER,
+
+  Nomehabilidade TEXT,
+
+  Nivelatingido INTEGER,
+
+  Descricao TEXT,
+
+  FOREIGN KEY (IDPessoa) REFERENCES pessoa(IDPessoa)
+
+);
+
+
+
+-- cria a tabela conquistas
+
+CREATE TABLE conquistas (
+
+  IDConquista INTEGER PRIMARY KEY AUTOINCREMENT,
+
+  IDPessoa INTEGER,
+
+  Nomeconquista TEXT,
+
+  Data_conquista DATE,
+
+  Descricao TEXT,
+
+  FOREIGN KEY (IDPessoa) REFERENCES pessoa(IDPessoa)
+
+);
+
+
+
+-- cria a tabela personalidade
+
+CREATE TABLE personalidade (
+
+  IDPersonalidade INTEGER PRIMARY KEY AUTOINCREMENT,
+
+  IDPessoa INTEGER,
+
+  Nomepersonalidade TEXT,
+
+  Nivel INTEGER,
+
+  Descricao TEXT,
+
+  FOREIGN KEY (IDPessoa) REFERENCES pessoa(IDPessoa)
+
+);
+
+
+
+-- cria a tabela experiencia_profissional
+
+CREATE TABLE experienciaprofissional (
+
+  IDExperiencia INTEGER PRIMARY KEY AUTOINCREMENT,
+
+  IDPessoa INTEGER,
+
+  Nomeempresa TEXT,
+
+  Nomecargo TEXT,
+
+  Datainicio DATE,
+
+  Datafim DATE,
+
+  Descricao TEXT,
+
+  FOREIGN KEY (IDPessoa) REFERENCES pessoa(IDPessoa)
+
+);</sql><current_tab id="0"/></tab_sql></sqlb_project>
