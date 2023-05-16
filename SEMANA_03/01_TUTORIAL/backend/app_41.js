@@ -1,3 +1,5 @@
+
+//iniciar o servidor
 const express = require('express'); 
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
