@@ -1,0 +1,48 @@
+.perfil {
+    background-color:grey;
+}
+
+.corpo{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}   
+
+.esquerda h2{
+    color: white;
+    background-color: #1A85C9;
+}
+.esquerda p{
+    color: black;
+}
+
+.direita {
+    display: flex;
+    flex-direction: column;
+    background-color: #1A85C9;
+    justify-content:center;
+
+}
+
+.direita h2 {
+    color: white;
+}
+
+.direita p {
+    color: white;
+}
+
+.formacao {
+    margin-bottom: 5px;
+}
+
+
+.formacao_academica p {
+    margin-bottom: 0px;
+}
