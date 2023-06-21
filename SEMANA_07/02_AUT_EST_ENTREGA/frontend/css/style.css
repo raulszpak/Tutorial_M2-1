@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.perfil {
+    background-color:grey;
+    width: 33.5%;
+}
+
+.corpo{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}   
+
+.esquerda h2{
+    color: white;
+    background-color: #1A85C9;
+}
+.esquerda p{
+    color: black;
+}
+
+.direita {
+    display: flex;
+    flex-direction: column;
+    background-color: #1A85C9;
+    justify-content:center;
+
+}
+
+.direita h2 {
+    color: white;
+}
+
+.direita p {
+    color: white;
+}
+
+.formacao {
+    margin-bottom: 5px;
+}
+

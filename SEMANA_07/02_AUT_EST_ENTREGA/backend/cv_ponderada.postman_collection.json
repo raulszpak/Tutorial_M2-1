@@ -1,0 +1,1075 @@
+{
+	"info": {
+		"_postman_id": "9f3d3267-6683-4fc3-bb58-50e8358a0207",
+		"name": "cv_ponderada",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27329400"
+	},
+	"item": [
+		{
+			"name": "CRUD pessoa",
+			"item": [
+				{
+					"name": "info_pessoa",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "cadastro_pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Nome",
+									"value": "Raul",
+									"type": "text"
+								},
+								{
+									"key": "Idade",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "raul.szpak@sou.inteli.edu.br",
+									"type": "text"
+								},
+								{
+									"key": "Telefone",
+									"value": "41987066693",
+									"type": "text"
+								},
+								{
+									"key": "Endereco",
+									"value": "Candido Hartmann 265",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Curitiba PR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info_pessoabyID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "subs_pessoabyID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Nome",
+									"value": "Raul Rezende",
+									"type": "text"
+								},
+								{
+									"key": "Idade",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "raulszpak@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Telefone",
+									"value": "41987066693",
+									"type": "text"
+								},
+								{
+									"key": "Endereco",
+									"value": "Dario Garcia 550",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Sem descricao",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/pessoa/2?Nome=Raul Rezende&Idade=22&Email=raulszpak@gmail.com&Telefone=41987066693&Endereco=Dario Garcia 550&Descricao=Atualizado",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"pessoa",
+								"2"
+							],
+							"query": [
+								{
+									"key": "Nome",
+									"value": "Raul Rezende"
+								},
+								{
+									"key": "Idade",
+									"value": "22"
+								},
+								{
+									"key": "Email",
+									"value": "raulszpak@gmail.com"
+								},
+								{
+									"key": "Telefone",
+									"value": "41987066693"
+								},
+								{
+									"key": "Endereco",
+									"value": "Dario Garcia 550"
+								},
+								{
+									"key": "Descricao",
+									"value": "Atualizado"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/pessoa/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"pessoa",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD formacao",
+			"item": [
+				{
+					"name": "info_formacao",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/formacao",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"formacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastro_formacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomefundacao",
+									"value": "Unicamp",
+									"type": "text"
+								},
+								{
+									"key": "Nomecurso",
+									"value": "Engenharia Mecatrônica",
+									"type": "text"
+								},
+								{
+									"key": "Datainicio",
+									"value": "2019",
+									"type": "text"
+								},
+								{
+									"key": "Datafim",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Sem descricao",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/formacao",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"formacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info_formacaobyID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/formacao/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"formacao",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subs_formacaobyID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomefundacao",
+									"value": "Unicamp",
+									"type": "text"
+								},
+								{
+									"key": "Nomecurso",
+									"value": "Engenharia de Controle e Automação",
+									"type": "text"
+								},
+								{
+									"key": "Datainicio",
+									"value": "2019",
+									"type": "text"
+								},
+								{
+									"key": "Datafim",
+									"value": "2021",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "-",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/formacao/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"formacao",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFormByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/formacao/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"formacao",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD habilidade",
+			"item": [
+				{
+					"name": "info_habilidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/habilidade",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"habilidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastro_habilidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomehabilidade",
+									"value": "HTML",
+									"type": "text"
+								},
+								{
+									"key": "Nivelatingido",
+									"value": "Básico",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Configuração de Tags",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/habilidade",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"habilidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info_habilidadeByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/habilidade/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"habilidade",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subs_habilidadebyID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomehabilidade",
+									"value": "CSS",
+									"type": "text"
+								},
+								{
+									"key": "Nivelatingido",
+									"value": "Básico",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Estilização",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/habilidade/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"habilidade",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteHabilidadeByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/habilidade/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"habilidade",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD conquista",
+			"item": [
+				{
+					"name": "info_conquista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/conquista",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"conquista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastro_conquista",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomeconquista",
+									"value": "Criação WELF",
+									"type": "text"
+								},
+								{
+									"key": "Data_conquista",
+									"value": "2023",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Loja manu cir",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/conquista",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"conquista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info_conquistaByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/conquista/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"conquista",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subs_conquistaByID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomeconquista",
+									"value": "Criação WELF",
+									"type": "text"
+								},
+								{
+									"key": "Data_conquista",
+									"value": "2023",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Loja E-Commerce, Manu Cit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/conquista/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"conquista",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteConquistaByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/conquista/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"conquista",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD personalidade",
+			"item": [
+				{
+					"name": "info_personalidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/personalidade",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"personalidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastro_personalidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomepersonalidade",
+									"value": "Ansioso",
+									"type": "text"
+								},
+								{
+									"key": "Nivel",
+									"value": "Intermediário",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Segunda característica",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/personalidade",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"personalidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info_personalidadeByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/personalidade/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"personalidade",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subs_personalidadeByID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomepersonalidade",
+									"value": "Ansioso",
+									"type": "text"
+								},
+								{
+									"key": "Nivel",
+									"value": "Pouco",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Característica secundária",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/personalidade/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"personalidade",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePersonalidadeByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/personalidade/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"personalidade",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD experiencia profissional",
+			"item": [
+				{
+					"name": "info_experienciaProfissional",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/experienciaProfissional",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"experienciaProfissional"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastro_experienciaProfissional",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomeempresa",
+									"value": "Matrix",
+									"type": "text"
+								},
+								{
+									"key": "Nomecargo",
+									"value": "Cloud Engineering",
+									"type": "text"
+								},
+								{
+									"key": "Datainicio",
+									"value": "2023",
+									"type": "text"
+								},
+								{
+									"key": "Datafim",
+									"value": "2023",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "Sem descricao",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/experienciaProfissional",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"experienciaProfissional"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info_experienciaProfissionalbyID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/formacao/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"formacao",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subs_experienciaProfissionalbyID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IDPessoa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Nomeempresa",
+									"value": "Matrix",
+									"type": "text"
+								},
+								{
+									"key": "Nomecargo",
+									"value": "Cloud Engineering",
+									"type": "text"
+								},
+								{
+									"key": "Datainicio",
+									"value": "02/2023",
+									"type": "text"
+								},
+								{
+									"key": "Datafim",
+									"value": "05/2023",
+									"type": "text"
+								},
+								{
+									"key": "Descricao",
+									"value": "-",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/experienciaProfissional/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"experienciaProfissional",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteExperienciaProfissionalByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/experienciaProfissional/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"experienciaProfissional",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
