@@ -1,5 +1,13 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 .perfil {
     background-color:grey;
+    width: 33.5%;
 }
 
 .corpo{
@@ -42,7 +50,3 @@
     margin-bottom: 5px;
 }
 
-
-.formacao_academica p {
-    margin-bottom: 0px;
-}
